@@ -411,6 +411,14 @@ public class HelloController {
             }
         }));
 
+        moreConsumable.setOnMouseClicked((new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                heroes.get(i).setPotions(2);
+                heroes.get(i).setLambas(2);
+                nextInnTurn(i);
+            }
+        }));
+
         moreAmmo.setOnMouseClicked((new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 if (fighterClass.equals( "isep.godefroyl.rpg.Hunter")){
